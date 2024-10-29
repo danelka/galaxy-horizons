@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Galactic Horizons</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header id="main-header" class="bg-dark text-white">
+    <h1 class="site-title text-center py-3">Galactic Horizons</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="authContainer" class="auth-container text-center">
+        <input type="text" id="username" placeholder="Enter your username" />
+        <button id="authBtn" class="btn btn-primary">Login</button>
+        <p id="authToggle">Don't have an account? <a href="#" id="signUpBtn">Sign Up</a></p>
+        <button id="logoutBtn" style="display: none;" class="btn btn-danger mt-3">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <div id="welcomeMessage" class="alert alert-success centered-message" role="alert">
+    Welcome, <span id="userDisplay"></span>!
+  </div>
+
+  <main class="container mt-4">
+    <section id="welcome">
+      <h2 class="section-heading">Welcome to Galactic Horizons</h2>
+
+      <p class="section-intro">
+        At Galactic Horizons, we are pioneers in space exploration and
+        technology. Our mission is to make space accessible to all, advancing
+        human presence beyond Earth and fostering a deeper understanding of
+        the cosmos.
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="img-fluid" alt="A futuristic space station orbiting Earth" />
+    </section>
+
+
+  </main>
+
+  <footer id="site-footer" class="bg-dark text-white text-center py-3">
+    <p class="footer-text">
+      &copy; Se-2329 Maxutova Danelya WEB-Tech Kamilla Zhakupova
+    </p>
+    <label class="toggle_label">
+      <input type="checkbox" id="themeSwitch" class="toggle" >
+      <span class="slider"></span>
+    </label>
+    <p id="theme"></p>
+    <button id="changeColorBtn" class="btn btn-light">Change Color</button>
+    <div id="dateTime"></div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
