@@ -225,22 +225,32 @@ document.addEventListener(
       themeSwitchButton.addEventListener("click", (e) => {
         const header = document.getElementsByTagName("header")[0];
         const footer = document.getElementsByTagName("footer")[0];
-
+        const dayNightTheme = localStorage.getItem("theme");
         // Toggle the theme
-        if (document.body.classList.contains("day-theme")) {
+        if (dayNightTheme =="day-theme") {
           document.body.classList.remove("day-theme");
+          localStorage.setItem('theme', 'night-theme');
           document.body.classList.add("night-theme");
           header.classList.remove('bg-dark');
+          header.classList.remove('night-theme1');
           header.classList.add('bg-light');
+          header.classList.add('day-theme1');
           footer.classList.remove('bg-dark');
+          footer.classList.remove('night-theme1');
           footer.classList.add('bg-light');
+          footer.classList.add('day-theme1');
         } else {
           document.body.classList.remove("night-theme");
           document.body.classList.add("day-theme");
+          localStorage.setItem('theme', 'day-theme');
+          header.classList.remove('day-theme1');
           header.classList.remove('bg-light');
+          header.classList.add('night-theme1');
           header.classList.add('bg-dark');
           footer.classList.remove('bg-light');
+          footer.classList.remove('day-theme1');
           footer.classList.add('bg-dark');
+          footer.classList.add('night-theme1');
         }
       });
 
@@ -255,6 +265,41 @@ document.addEventListener(
         });
       }
     }
+
+    function setTheme(){
+      const header = document.getElementsByTagName("header")[0];
+      const footer = document.getElementsByTagName("footer")[0];
+      const dayNightTheme = localStorage.getItem("theme");
+      // Toggle the theme
+      if (dayNightTheme =="night-theme") {
+        document.body.classList.remove("day-theme");
+        localStorage.setItem('theme', 'night-theme');
+        document.body.classList.add("night-theme");
+        header.classList.remove('bg-dark');
+        header.classList.remove('night-theme1');
+        header.classList.add('bg-light');
+        header.classList.add('day-theme1');
+        footer.classList.remove('bg-dark');
+        footer.classList.remove('night-theme1');
+        footer.classList.add('bg-light');
+        footer.classList.add('day-theme1');
+      } else {
+        document.body.classList.remove("night-theme");
+        document.body.classList.add("day-theme");
+        localStorage.setItem('theme', 'day-theme');
+        header.classList.remove('day-theme1');
+        header.classList.remove('bg-light');
+        header.classList.add('night-theme1');
+        header.classList.add('bg-dark');
+        footer.classList.remove('bg-light');
+        footer.classList.remove('day-theme1');
+        footer.classList.add('bg-dark');
+        footer.classList.add('night-theme1');
+      }
+    }
+
+    setTheme();
+    
 
     const username = localStorage.getItem("username");
 
