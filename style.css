@@ -20,10 +20,22 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   text-align: center;
   color: #fff;
+}
+
+.day-theme1{
+  margin: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  text-align: center;
+  color: #000000 !important;
+}
+.night-theme1{
+  margin: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #ffffff;
 }
 
 header nav a {
