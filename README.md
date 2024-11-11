@@ -1,5 +1,5 @@
 # Galactic Horizons Website
-[Danelya Maxutova]
+
 ## Overview
 
 This is the front-end layout for the "Galactic Horizons" website, a space exploration and technology platform aimed at advancing human presence in space. The website includes a clean, responsive design and features for user authentication, dynamic content, and an interactive user interface.
@@ -26,7 +26,8 @@ This is the front-end layout for the "Galactic Horizons" website, a space explor
 - **Welcome Section:**
   - Title: "Welcome to Galactic Horizons"
   - Description: Brief intro to the mission of Galactic Horizons, focusing on space exploration and technology.
-  - Image: A futuristic space station orbiting Earth.
+  - Image: A futuristic space station orbiting Earth.![Space Exploration](https://bgr.com/wp-content/uploads/2022/03/AdobeStock_194080021.jpeg?resize=1020%2C574&quality=82)
+
 
 ### Footer
 - **Copyright:** Se-2329 Maxutova Danelya, WEB-Tech Kamilla Zhakupova
