@@ -1,5 +1,5 @@
 # Galactic Horizons Website
-
+[Danelya Maxutova]
 ## Overview
 
 This is the front-end layout for the "Galactic Horizons" website, a space exploration and technology platform aimed at advancing human presence in space. The website includes a clean, responsive design and features for user authentication, dynamic content, and an interactive user interface.
