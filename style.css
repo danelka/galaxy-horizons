@@ -9,6 +9,21 @@ body {
   background-size: cover;
 }
 
+.body-light{
+  background: linear-gradient(to bottom, #ffffff, #004e92) !important;
+  color: #000;
+}
+
+.section-light{
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.article-light{
+  color: #000;
+  background-color: rgb(255, 255, 255, .7) !important;
+}
+
 .text-cyan {
   color: cyan;
 }
@@ -30,6 +45,9 @@ header h1 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
   text-align: center;
   color: #000000 !important;
+}
+.h1-light{
+color: #000 !important;
 }
 .night-theme1{
   margin: 0;
