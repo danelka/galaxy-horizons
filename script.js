@@ -223,35 +223,7 @@ document.addEventListener(
 
     if (themeSwitchButton) {
       themeSwitchButton.addEventListener("click", (e) => {
-        const header = document.getElementsByTagName("header")[0];
-        const footer = document.getElementsByTagName("footer")[0];
-        const dayNightTheme = localStorage.getItem("theme");
-        // Toggle the theme
-        if (dayNightTheme =="day-theme") {
-          document.body.classList.remove("day-theme");
-          localStorage.setItem('theme', 'night-theme');
-          document.body.classList.add("night-theme");
-          header.classList.remove('bg-dark');
-          header.classList.remove('night-theme1');
-          header.classList.add('bg-light');
-          header.classList.add('day-theme1');
-          footer.classList.remove('bg-dark');
-          footer.classList.remove('night-theme1');
-          footer.classList.add('bg-light');
-          footer.classList.add('day-theme1');
-        } else {
-          document.body.classList.remove("night-theme");
-          document.body.classList.add("day-theme");
-          localStorage.setItem('theme', 'day-theme');
-          header.classList.remove('day-theme1');
-          header.classList.remove('bg-light');
-          header.classList.add('night-theme1');
-          header.classList.add('bg-dark');
-          footer.classList.remove('bg-light');
-          footer.classList.remove('day-theme1');
-          footer.classList.add('bg-dark');
-          footer.classList.add('night-theme1');
-        }
+        setTheme();
       });
 
       const playSoundBtn = document.getElementById("playSoundBtn");
@@ -266,12 +238,18 @@ document.addEventListener(
       }
     }
 
-    function setTheme(){
+    function setTheme(a = 'day'){
       const header = document.getElementsByTagName("header")[0];
       const footer = document.getElementsByTagName("footer")[0];
       const dayNightTheme = localStorage.getItem("theme");
+      const section = document.getElementsByTagName("section")[0];
+      const article = Array.from(document.getElementsByTagName("article"));
+      const h1 = document.getElementsByTagName('h1')[0];
+      const nav = Array.from(document.getElementsByTagName('a'));
+      
+
       // Toggle the theme
-      if (dayNightTheme =="night-theme") {
+      if (dayNightTheme ==a + '-theme'){
         document.body.classList.remove("day-theme");
         localStorage.setItem('theme', 'night-theme');
         document.body.classList.add("night-theme");
@@ -283,6 +261,24 @@ document.addEventListener(
         footer.classList.remove('night-theme1');
         footer.classList.add('bg-light');
         footer.classList.add('day-theme1');
+        
+        if(article){
+        article.forEach(element => {
+          element.classList.add('article-light')
+        });
+        }
+        
+        if(section){
+        section.classList.add('section-light');
+        }
+        document.body.classList.add("body-light");
+        h1.classList.add('h1-light');
+        nav.forEach(element => {
+          element.classList.add('h1-light')
+        });
+
+      
+        
       } else {
         document.body.classList.remove("night-theme");
         document.body.classList.add("day-theme");
@@ -295,10 +291,26 @@ document.addEventListener(
         footer.classList.remove('day-theme1');
         footer.classList.add('bg-dark');
         footer.classList.add('night-theme1');
+
+        if(article){
+          article.forEach(element => {
+            element.classList.remove('article-light')
+          });
+          }
+          
+          if(section){
+          section.classList.remove('section-light');
+          }
+          document.body.classList.remove("body-light");
+          h1.classList.remove('h1-light');
+          nav.forEach(element => {
+            element.classList.remove('h1-light')
+          });
+  
       }
     }
 
-    setTheme();
+    setTheme('night');
     
 
     const username = localStorage.getItem("username");
