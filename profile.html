@@ -1,172 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - Galactic Horizons</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
 
-  <body>
-    <header class="bg-dark text-white text-center py-3">
-      <h1>Galactic Horizons</h1>
-      <nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Galactic Horizons</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header id="main-header" class="bg-dark text-white">
+    <h1 class="site-title text-center py-3">Galactic Horizons</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
 
-    <main class="container mt-4">
-      <section>
-        <h2>Contact Us</h2>
-        <p>
-          We'd love to hear from you! Whether you have questions about our
-          services, want to discuss a potential partnership, or simply want to
-          say hello, feel free to reach out using the contact form below or
-          through the contact details provided.
-        </p>
+  <footer id="site-footer" class="bg-dark text-white text-center py-3">
+    <p class="footer-text">
+      &copy; Se-2329 Maxutova Danelya WEB-Tech Kamilla Zhakupova
+    </p>
+    <label class="toggle_label">
+      <input type="checkbox" id="themeSwitch" class="toggle" >
+      <span class="slider"></span>
+    </label>
+    <p id="theme"></p>
+    <button id="changeColorBtn" class="btn btn-light">Change Color</button>
+    <div id="dateTime"></div>
+  </footer>
 
-        <form
-          id="contact-form"
-          action="#"
-          method="post"
-          aria-labelledby="contact-form-heading"
-          onsubmit="playSound();"
-        >
-          <h3 id="contact-form-heading" class="visually-hidden">
-            Contact Form
-          </h3>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="./script.js"></script>
+</body>
 
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              class="form-control"
-              required
-              aria-required="true"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="form-control"
-              required
-              aria-required="true"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="inquiry">Inquiry Type:</label>
-            <select
-              id="inquiry"
-              name="inquiry"
-              class="form-control"
-              required
-              aria-required="true"
-            >
-              <option value="">Select an option</option>
-              <option value="general">General Inquiry</option>
-              <option value="feedback">Feedback</option>
-              <option value="support">Support</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea
-              id="message"
-              name="message"
-              class="form-control"
-              required
-              aria-required="true"
-            ></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        <audio id="submitSound" src="./sound1.mp3" preload="auto"></audio>
-
-        <div class="contact-info mt-4">
-          <h3>Contact Details</h3>
-          <address>
-            <p>
-              <strong>Galactic Horizons</strong><br />
-              Baikonur Cosmodrome<br />
-              Baikonur, Kazakhstan<br />
-              10000
-            </p>
-          </address>
-          <p><strong>Phone:</strong> +7 (123) 456-7890</p>
-          <p>
-            <strong>Email:</strong>
-            <a href="mailto:info@galactichorizons.com" style="color: #00bfff"
-              >info@galactichorizons.com</a
-            >
-          </p>
-        </div>
-
-        <div class="mt-4">
-          <h3>Find Us</h3>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12770.55621064595!2d63.31839785229247!3d45.96504802619109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42b539ebf92738cf%3A0x99f407d68f54b930!2sBaikonur%2C%20Kazakhstan!5e0!3m2!1sen!2sus!4v1632532090606!5m2!1sen!2sus"
-            width="100%"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            aria-label="Google Maps location of Baikonur Cosmodrome"
-          ></iframe>
-        </div>
-      </section>
-    </main>
-
-    <footer id="site-footer" class="bg-dark text-white text-center py-3">
-        <p class="footer-text">
-          &copy; Se-2329 Maxutova Danelya WEB-Tech Kamila Zhakupova
-        </p>
-        <label class="toggle_label">
-          <input type="checkbox" id="themeSwitch" class="toggle" >
-          <span class="slider"></span>
-        </label>
-        <p id="theme"></p>
-        <button id="changeColorBtn" class="btn btn-light">Change Color</button>
-      <div id="dateTime"></div>
-
-      </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="./script.js"></script>
-  </body>
 </html>
