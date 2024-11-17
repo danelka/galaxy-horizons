@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home - Galactic Horizons</title>
+  <title>Profile - Galactic Horizons</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="./profile.css" />
 </head>
+
 <body>
+  <!-- Header Section -->
   <header id="main-header" class="bg-dark text-white">
     <h1 class="site-title text-center py-3">Galactic Horizons</h1>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -37,17 +39,39 @@
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="profile.html">Profile</a>
-            </li>
+            <a class="nav-link active" href="profile.html">Profile</a>
+          </li>
         </ul>
       </div>
+    </nav>
+  </header>
 
+  <!-- Profile Section -->
+  <main class="container py-5">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="profile-card text-center">
+          <img src="https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Profile Picture" class="img-fluid rounded-circle mb-3">
+          <h2>Maxutova Danelya</h2>
+          <p>@danelya</p>
+          <p class="text-muted">Galactic Explorer | Web Developer | Blogger</p>
+        </div>
+      </div>
+
+    
+
+        
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
   <footer id="site-footer" class="bg-dark text-white text-center py-3">
     <p class="footer-text">
-      &copy; Se-2329 Maxutova Danelya WEB-Tech Kamila Zhakupova
+      &copy; 2024 Galactic Horizons | Se-2329 Maxutova Danelya, Kamila Zhakupova
     </p>
     <label class="toggle_label">
-      <input type="checkbox" id="themeSwitch" class="toggle" >
+      <input type="checkbox" id="themeSwitch" class="toggle">
       <span class="slider"></span>
     </label>
     <p id="theme"></p>
@@ -55,6 +79,7 @@
     <div id="dateTime"></div>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
