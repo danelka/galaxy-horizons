@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Profile - Galactic Horizons</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="./profile.css" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
@@ -46,33 +46,29 @@
     </nav>
   </header>
 
- 
-
-  
-        
+  <main class="container my-5 p-5 bg-light rounded shadow">
+    <div class="row mb-5">
+      <div class="col-lg-4 text-center">
+        <img id="profileImgPreview" class="rounded-circle border mb-3" 
+          src="https://via.placeholder.com/150" 
+          alt="Profile Picture" width="150" height="150" 
+          onclick="document.getElementById('profileImgInput').click();" />
+        <input type="file" id="profileImgInput" class="form-control d-none" accept="image/*" onchange="previewImage(event)" />
+      </div>
+      <div class="col-lg-8" style="color: black;">
+        <p><strong>Username:</strong> <span id="userName">exampleUser</span></p>
+        <p><strong>First Name:</strong> <span id="userFirstName">John</span></p>
+        <p><strong>Last Name:</strong> <span id="userLastName">Doe</span></p>
+        <p><strong>Email:</strong> <span id="userEmail">user@example.com</span></p>
+        <p><strong>Phone:</strong> <span id="userPhone">+7 (701) 123 4567</span></p>
       </div>
     </div>
   </main>
-
-  <!-- Footer Section -->
-  <footer id="site-footer" class="bg-dark text-white text-center py-3">
-    <p class="footer-text">
-      &copy; 2024 Galactic Horizons | Se-2329 Maxutova Danelya, Kamila Zhakupova
-    </p>
-    <label class="toggle_label">
-      <input type="checkbox" id="themeSwitch" class="toggle">
-      <span class="slider"></span>
-    </label>
-    <p id="theme"></p>
-    <button id="changeColorBtn" class="btn btn-light">Change Color</button>
-    <div id="dateTime"></div>
-  </footer>
-
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="./script.js"></script>
+  <script src="./scripts/profile.js"></script>
 </body>
 
 </html>
