@@ -1,23 +1,3 @@
-function loadUsers() {
-    fetch('data/user.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(users => {
-            if (!localStorage.getItem('users')) {
-                localStorage.setItem('users', JSON.stringify(users));
-                console.log("Users loaded into localStorage:", users);
-            }
-        })
-        .catch(error => console.error('Error loading user data:', error));
-}
-
-// Call the function to load users when the page is first accessed
-loadUsers();
-
 // Function to create a new user account
 function createAccount() {
     const username = document.getElementById('username').value;
@@ -50,7 +30,7 @@ function createAccount() {
         feedbackDiv.style.color = 'red';
         return;
     }
-
+    console.log(password, confirmPassword)
     if (password !== confirmPassword) {
         feedbackDiv.textContent = 'Passwords do not match. Please try again.';
         feedbackDiv.style.color = 'red';
@@ -105,3 +85,8 @@ function clearFormInputs() {
     document.getElementById('password').value = '';
     document.getElementById('confirmPassword').value = '';
 }
+
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+    createAccount();
+});
