@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home - Galactic Horizons</title>
+  <title>Login - Galactic Horizons</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="./style.css" />
 </head>
@@ -36,29 +36,38 @@
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link" href="profile.html">Profile</a>
-            </li>
         </ul>
       </div>
+    </nav>
+  </header>
 
-  <footer id="site-footer" class="bg-dark text-white text-center py-3">
-    <p class="footer-text">
-      &copy; Se-2329 Maxutova Danelya WEB-Tech Kamila Zhakupova
-    </p>
-    <label class="toggle_label">
-      <input type="checkbox" id="themeSwitch" class="toggle" >
-      <span class="slider"></span>
-    </label>
-    <p id="theme"></p>
-    <button id="changeColorBtn" class="btn btn-light">Change Color</button>
-    <div id="dateTime"></div>
-  </footer>
-
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="text-center mb-4" style="color: black;">Login</h2> <!-- Changed to text-white -->
+            <form id="loginForm">
+              <div class="form-group">
+                <label for="usernameOrEmail">Username or Email</label>
+                <input type="text" id="usernameOrEmail" name="usernameOrEmail" class="form-control" placeholder="Enter username or email" required />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Enter password" required />
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Login</button>
+              <div id="feedback" style="margin-top: 10px; color: red;"></div> <!-- Feedback Div -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="./script.js"></script>
+  <script src="./scripts/log.js"></script>
 </body>
 
 </html>
