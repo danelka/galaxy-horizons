@@ -367,3 +367,89 @@ document.addEventListener(
   },
   false
 );
+const data = [
+  { title: "Latest Discovery in Space Exploration", category: "Blog", content: "Learn about the upcoming space missions." },
+  { title: "Upcoming Space Mission", category: "Blog", content: "NASA is launching a new rover to Mars." },
+  { title: "Space Station Orbit", category: "Blog", content: "A look at the future of space stations." },
+  { title: "Galactic Horizons Services", category: "Services", content: "We offer space travel services." },
+];
+
+// Function to display search results
+function displayResults(results) {
+  const resultsContainer = document.getElementById("searchResults");
+  resultsContainer.innerHTML = '';  // Clear previous results
+
+  if (results.length === 0) {
+    resultsContainer.innerHTML = "<p>No results found.</p>";
+  } else {
+    results.forEach(result => {
+      const resultDiv = document.createElement("div");
+      resultDiv.classList.add("result-item");
+
+      // Create a link for the result
+      const resultLink = document.createElement("a");
+      let categoryPage = "";
+
+      // Link logic based on category
+      if (result.category.toLowerCase() === "blog") {
+        categoryPage = "blog.html";  // Link to the blog page
+      } else if (result.category.toLowerCase() === "services") {
+        categoryPage = "services.html";  // Link to the services page
+      }
+
+      resultLink.href = categoryPage;  // Set the href to the appropriate page
+      resultLink.target = "_blank";  // Open in a new tab
+
+      // Add content to the link
+      resultLink.innerHTML = `
+        <h3>${result.title}</h3>
+        <p>${result.content}</p>
+      `;
+      
+      // Append the link inside the resultDiv
+      resultDiv.appendChild(resultLink);
+
+      // Append the resultDiv to the results container
+      resultsContainer.appendChild(resultDiv);
+    });
+  }
+}
+
+// On page load, check if there's a search term or category stored in localStorage
+window.onload = function() {
+  const savedSearchTerm = localStorage.getItem("lastSearchTerm");
+  const savedCategory = localStorage.getItem("lastSelectedCategory");
+
+  if (savedSearchTerm || savedCategory) {
+    performSearch();  // Automatically run the search when the page loads
+  }
+};
+
+// Save the current search term and category in localStorage (but do not display them)
+function performSearch() {
+  const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+  const selectedCategory = document.getElementById("categorySelect").value.toLowerCase();
+
+  // Save the search term and category to localStorage for persistence (but don't display them)
+  localStorage.setItem("lastSearchTerm", searchQuery);
+  localStorage.setItem("lastSelectedCategory", selectedCategory);
+
+  const searchResults = data.filter(item => {
+    // Filter by search term
+    const matchesSearchQuery = 
+      item.title.toLowerCase().includes(searchQuery) ||
+      item.content.toLowerCase().includes(searchQuery);
+
+    // Filter by category if selected (empty means "All categories")
+    const matchesCategory = selectedCategory === "" || item.category.toLowerCase() === selectedCategory;
+
+    return matchesSearchQuery && matchesCategory;
+  });
+
+  displayResults(searchResults);
+}
+
+// Function to filter by category when dropdown value changes
+function filterByCategory() {
+  performSearch();  // Trigger search when category is changed
+}
