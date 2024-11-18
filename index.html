@@ -53,6 +53,20 @@
 </div>
 
     </nav>
+    <div class="form-inline mb-3">
+        <input type="text" id="searchInput" class="form-control form-control-sm mr-2" placeholder="Search..."
+          oninput="performSearch()" style="width: 200px;" />
+        <!-- Category Filter -->
+        <select id="categorySelect" class="form-control form-control-sm" onchange="performSearch()" style="width: 150px;">
+          <option value="">All</option>
+          <option value="Blog">Blog</option>
+          <option value="Services">Services</option>
+        </select>
+      </div>
+  
+  
+      <!-- Display filtered results here -->
+      <div id="searchResults" class="mt-4"></div>
   </header>
 
   
